@@ -44,7 +44,6 @@ quoteRouter.post('/', (req, res, next) => {
 quoteRouter.delete('/:id', (req, res, next) => {
     const quoteIndex = quotes.findIndex(quote => { return quote.id === Number(req.params.id) });
     if (quoteIndex !== -1) {
-        console.log(quotes[quoteIndex]);
         res.status(200).send(quotes[quoteIndex]);
         quotes.splice(quoteIndex, 1);
     } else {

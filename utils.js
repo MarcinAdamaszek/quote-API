@@ -10,7 +10,6 @@ const generateId = array => {
   })) {
     id++;
   }
-  console.log('id number from generateId function', id);
   return id;
 }
 

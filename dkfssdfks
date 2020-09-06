@@ -1,0 +1,26 @@
+warning: LF will be replaced by CRLF in utils.js.
+The file will have its original line endings in your working directory
+[1mdiff --git a/getQuoteRouter.js b/getQuoteRouter.js[m
+[1mindex 81be986..a2f9bbb 100644[m
+[1m--- a/getQuoteRouter.js[m
+[1m+++ b/getQuoteRouter.js[m
+[36m@@ -44,7 +44,6 @@[m [mquoteRouter.post('/', (req, res, next) => {[m
+ quoteRouter.delete('/:id', (req, res, next) => {[m
+     const quoteIndex = quotes.findIndex(quote => { return quote.id === Number(req.params.id) });[m
+     if (quoteIndex !== -1) {[m
+[31m-        console.log(quotes[quoteIndex]);[m
+         res.status(200).send(quotes[quoteIndex]);[m
+         quotes.splice(quoteIndex, 1);[m
+     } else {[m
+[1mdiff --git a/utils.js b/utils.js[m
+[1mindex 6487732..989bb09 100644[m
+[1m--- a/utils.js[m
+[1m+++ b/utils.js[m
+[36m@@ -10,7 +10,6 @@[m [mconst generateId = array => {[m
+   })) {[m
+     id++;[m
+   }[m
+[31m-  console.log('id number from generateId function', id);[m
+   return id;[m
+ }[m
+ [m
